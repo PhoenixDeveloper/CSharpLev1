@@ -30,6 +30,22 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
                         int number = int.Parse(Console.ReadLine());
                         Console.WriteLine("Количество цифр в числе = {0}", AmountNumber(number));
                         break;
+                    case "3":
+                        int[] numbers = new int[1];
+                        int numberCirle;
+                        while (true)
+                        {
+                            Console.Write("Введите целочисленное число(при вводе нуля ввод останавливается): ");
+                            numberCirle = int.Parse(Console.ReadLine());
+                            if (numberCirle == 0)
+                            {
+                                break;
+                            }
+                            Array.Resize(ref numbers, numbers.Length + 1);
+                            numbers[numbers.Length - 1] = numberCirle;
+                        }
+                        Console.WriteLine("Сумма нечетных положительных чисел равна {0}", SumOddPositiveNumbers(numbers));
+                        break;
                     case "exit":
                         return;
                     default:
@@ -65,6 +81,19 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
                 number /= 10;
             }
             return amount;
+        }
+
+        static int SumOddPositiveNumbers(int[] numbers)
+        {
+            int sum = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i]>0 && numbers[i]%2==1)
+                {
+                    sum += numbers[i];
+                }
+            }
+            return sum;
         }
     }
 }
