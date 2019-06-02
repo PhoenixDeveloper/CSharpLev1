@@ -25,6 +25,11 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
                         double c = double.Parse(Console.ReadLine());
                         Console.WriteLine("Минимальным является число {0}", MinNum(a, b, c));
                         break;
+                    case "2":
+                        Console.Write("Введите целочисленное число: ");
+                        int number = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Количество цифр в числе = {0}", AmountNumber(number));
+                        break;
                     case "exit":
                         return;
                     default:
@@ -49,6 +54,17 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             {
                 return c;
             }
+        }
+
+        static int AmountNumber(int number)
+        {
+            int amount = 0;
+            while (number!=0)
+            {
+                amount++;
+                number /= 10;
+            }
+            return amount;
         }
     }
 }
