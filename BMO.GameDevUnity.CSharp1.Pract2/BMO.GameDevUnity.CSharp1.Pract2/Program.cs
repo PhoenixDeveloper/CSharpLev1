@@ -46,6 +46,31 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
                         }
                         Console.WriteLine("Сумма нечетных положительных чисел равна {0}", SumOddPositiveNumbers(numbers));
                         break;
+                    case "4":
+                        int amountAuthentication = 0;
+                        do
+                        {
+                            Console.Write("Введите логин: ");
+                            string login = Console.ReadLine();
+                            Console.Write("Введите пароль: ");
+                            string password = Console.ReadLine();
+                            if (Authentication(login,password))
+                            {
+                                Console.WriteLine("Добро пожаловать!");
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Неверная связка логин/пароль");
+                            }
+                            amountAuthentication++;
+                        }
+                        while (amountAuthentication < 3);
+                        if (amountAuthentication == 3)
+                        {
+                            Console.WriteLine("Превышено количество попыток аутентификации");
+                        }
+                        break;
                     case "exit":
                         return;
                     default:
@@ -94,6 +119,11 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
                 }
             }
             return sum;
+        }
+
+        static bool Authentication(string login, string password)
+        {
+            return (login == "root" && password == "GeekBrains") ? true : false;           
         }
     }
 }
