@@ -90,6 +90,20 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
                         double weight = double.Parse(Console.ReadLine());
                         Console.WriteLine(BMI(height / 100, weight));
                         break;
+                    case "6":
+                        DateTime startTime;
+                        DateTime endTime;
+                        TimeSpan resultTime;
+                        Console.Write("Введите начальное число: ");
+                        long start = long.Parse(Console.ReadLine());
+                        Console.Write("Введите конечное число: ");
+                        long end = long.Parse(Console.ReadLine());
+                        startTime = DateTime.Now;
+                        Console.WriteLine($"Количество 'хороших' чисел равно = {AmountGoodNumbres(start, end)}");
+                        endTime = DateTime.Now;
+                        resultTime = endTime - startTime;
+                        Console.WriteLine($"Время выполнения программы в секундах = {resultTime.Seconds}");
+                        break;
                     case "exit":
                         return;
                     default:
@@ -116,7 +130,7 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             }
         }
 
-        static int AmountNumber(int number)
+        static int AmountNumber(long number)
         {
             int amount = 0;
             while (number!=0)
@@ -160,6 +174,31 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             {
                 return $"ИМТ ({BMI}) в пределах нормальных значений";
             }
+        }
+
+        static int AmountGoodNumbres(long start, long end)
+        {
+            int amount = 0;
+            long sum = 0;
+            long number;
+            Console.WriteLine("Хорошие числа:");
+            for (long i = start; i <= end; i++)
+            {
+                number = i;
+                for (int j = AmountNumber(i); j > 1; j--)
+                {
+                    sum += number / Convert.ToInt64(Math.Pow(10, (j - 1)));
+                    number = number % Convert.ToInt64(Math.Pow(10, (j - 1)));
+                }
+                sum += number;
+                if (i % sum == 0)
+                {
+                    Console.WriteLine(i);
+                    amount++;
+                }
+                sum = 0;
+            }
+            return amount;
         }
     }
 }
