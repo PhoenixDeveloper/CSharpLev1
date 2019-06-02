@@ -8,6 +8,8 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
 {
     class Program
     {
+        static long sum = 0;
+
         static void Main(string[] args)
         {
             Console.WriteLine(@"© (Беленко Михаил Олегович),
@@ -104,6 +106,14 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
                         resultTime = endTime - startTime;
                         Console.WriteLine($"Время выполнения программы в секундах = {resultTime.Seconds}");
                         break;
+                    case "7":
+                        Console.Write("Введите начальное число: ");
+                        long startNum = long.Parse(Console.ReadLine());
+                        Console.Write("Введите конечное число: ");
+                        long endNum = long.Parse(Console.ReadLine());
+                        ShowLineNumber(startNum, endNum);
+                        Console.WriteLine($"Сумма введенных чисел равна = {SumLineNumber(startNum, endNum)}");
+                        break;
                     case "exit":
                         return;
                     default:
@@ -199,6 +209,24 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
                 sum = 0;
             }
             return amount;
+        }
+
+        static void ShowLineNumber(long start, long end)
+        {
+            Console.WriteLine(start);
+            if (start < end) ShowLineNumber(start + 1, end);            
+        }
+
+        static long SumLineNumber(long start, long end)
+        {            
+            if (start < end)
+            {
+                sum += start;
+                return SumLineNumber(start + 1, end);
+            }
+            long result = sum;
+            sum = 0;
+            return result;
         }
     }
 }
