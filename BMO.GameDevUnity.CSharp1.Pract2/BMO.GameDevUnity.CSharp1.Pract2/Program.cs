@@ -44,21 +44,35 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
                         long number = long.Parse(Console.ReadLine());
                         Console.WriteLine("Количество цифр в числе = {0}", AmountNumber(number));
                         break;
-                    case "3":
-                        int[] numbers = new int[1];
-                        int numberCirle;
+                    case "3":                        
+                        char lastSymbol = '\t';
+                        string textLine = "";
+                        ConsoleKeyInfo cki;
+
+                        Console.Write("Введите ряд целочисленных чисел(при вводе нуля ввод останавливается): ");
                         while (true)
                         {
-                            Console.Write("Введите целочисленное число(при вводе нуля ввод останавливается): ");
-                            numberCirle = int.Parse(Console.ReadLine());
-                            if (numberCirle == 0)
+                            cki = Console.ReadKey();
+
+                            if (cki.KeyChar == '0' && (lastSymbol == ' ' || lastSymbol == '\t' || lastSymbol == '\n' || lastSymbol == '\r'))
                             {
                                 break;
                             }
-                            Array.Resize(ref numbers, numbers.Length + 1);
-                            numbers[numbers.Length - 1] = numberCirle;
+                            textLine += cki.KeyChar;
+                            lastSymbol = cki.KeyChar;
                         }
-                        Console.WriteLine("Сумма нечетных положительных чисел равна {0}", SumOddPositiveNumbers(numbers));
+
+                        string[] textLineArray = textLine.Split(' ', '\t', '\n', '\r');
+                        int[] numbers = new int[textLineArray.Length - 1];
+                        for (int i = 0; i < textLineArray.Length-1; i++)
+                        {                            
+                            if (int.TryParse(textLineArray[i], out numbers[i]))
+                            {
+                                numbers[i] = int.Parse(textLineArray[i]);
+                            }                            
+                        }
+
+                        Console.WriteLine("\nСумма нечетных положительных чисел равна {0}", SumOddPositiveNumbers(numbers));
                         break;
                     case "4":
                         int amountAuthentication = 0;
