@@ -41,7 +41,7 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
                         break;
                     case "2":
                         Console.Write("Введите целочисленное число: ");
-                        int number = int.Parse(Console.ReadLine());
+                        long number = long.Parse(Console.ReadLine());
                         Console.WriteLine("Количество цифр в числе = {0}", AmountNumber(number));
                         break;
                     case "3":
