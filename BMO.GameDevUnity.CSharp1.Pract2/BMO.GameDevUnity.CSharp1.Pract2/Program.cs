@@ -65,11 +65,8 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
                         string[] textLineArray = textLine.Split(' ', '\t', '\n', '\r');
                         int[] numbers = new int[textLineArray.Length - 1];
                         for (int i = 0; i < textLineArray.Length-1; i++)
-                        {                            
-                            if (int.TryParse(textLineArray[i], out numbers[i]))
-                            {
-                                numbers[i] = int.Parse(textLineArray[i]);
-                            }                            
+                        {
+                            int.TryParse(textLineArray[i], out numbers[i]);                            
                         }
 
                         Console.WriteLine("\nСумма нечетных положительных чисел равна {0}", SumOddPositiveNumbers(numbers));
