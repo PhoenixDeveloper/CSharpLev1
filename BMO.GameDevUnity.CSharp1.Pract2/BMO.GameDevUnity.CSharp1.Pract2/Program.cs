@@ -115,7 +115,8 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
                         Console.WriteLine($"Количество 'хороших' чисел равно = {AmountGoodNumbres(start, end)}");
                         endTime = DateTime.Now;
                         resultTime = endTime - startTime;
-                        Console.WriteLine($"Время выполнения программы в секундах = {resultTime.Seconds}");
+                        Console.WriteLine($"Время выполнения программы в тиках = {resultTime.Ticks}");
+                        Console.WriteLine($"Время выполнения программы в секундах = {resultTime.TotalSeconds}");
                         break;
                     case "7":
                         Console.Write("Введите начальное число: ");
@@ -153,13 +154,7 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
 
         static int AmountNumber(long number)
         {
-            int amount = 0;
-            while (number!=0)
-            {
-                amount++;
-                number /= 10;
-            }
-            return amount;
+            return (number == 0) ? 1 : (int)Math.Ceiling(Math.Log10(Math.Abs(number) + 0.5));
         }
 
         static int SumOddPositiveNumbers(int[] numbers)
@@ -202,21 +197,21 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             int amount = 0;
             long sum = 0;
             long number;
-            Console.WriteLine("Хорошие числа:");
             for (long i = start; i <= end; i++)
             {
                 number = i;
-                for (int j = AmountNumber(i); j > 1; j--)
+                do
                 {
-                    sum += number / Convert.ToInt64(Math.Pow(10, (j - 1)));
-                    number = number % Convert.ToInt64(Math.Pow(10, (j - 1)));
+                    sum += number % 10;
+                    number = number / 10;
                 }
-                sum += number;
+                while (number >= 1);
+                
                 if (i % sum == 0)
                 {
-                    Console.WriteLine(i);
                     amount++;
                 }
+
                 sum = 0;
             }
             return amount;
@@ -242,37 +237,97 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
         
         static void InsertInt32(out int output)
         {
-            int.TryParse(Console.ReadLine(), out output);
+            while (true)
+            {
+                if (int.TryParse(Console.ReadLine(), out output))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Введены некоректные данные!/nПопробуйте снова: ");
+                }
+            }
         }
 
         static int InsertInt32()
         {
             int output;
-            int.TryParse(Console.ReadLine(), out output);
+            while (true)
+            {
+                if (int.TryParse(Console.ReadLine(), out output))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Введены некоректные данные!/nПопробуйте снова: ");
+                }                
+            }            
             return output;
         }
 
         static void InsertInt64(out long output)
         {
-            long.TryParse(Console.ReadLine(), out output);
+            while (true)
+            {
+                if (long.TryParse(Console.ReadLine(), out output))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Введены некоректные данные!\nПопробуйте снова: ");
+                }
+            }
         }
 
         static long InsertInt64()
         {
             long output;
-            long.TryParse(Console.ReadLine(), out output);
+            while (true)
+            {
+                if (long.TryParse(Console.ReadLine(), out output))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Введены некоректные данные!\nПопробуйте снова: ");
+                }
+            }
             return output;
         }
 
         static void InsertDouble(out double output)
         {
-            double.TryParse(Console.ReadLine(), out output);
+            while (true)
+            {
+                if (double.TryParse(Console.ReadLine(), out output))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Введены некоректные данные!\nПопробуйте снова: ");
+                }
+            }
         }
 
         static double InsertDouble()
         {
             double output;
-            double.TryParse(Console.ReadLine(), out output);
+            while (true)
+            {
+                if (double.TryParse(Console.ReadLine(), out output))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Введены некоректные данные!\nПопробуйте снова: ");
+                }
+            }
             return output;
         }
     }
