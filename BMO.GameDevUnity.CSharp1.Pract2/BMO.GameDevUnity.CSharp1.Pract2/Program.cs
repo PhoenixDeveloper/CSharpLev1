@@ -136,6 +136,13 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             
         }
 
+        /// <summary>
+        /// Метод возвращает минимальное из трех чисел
+        /// </summary>
+        /// <param name="a">Первое число</param>
+        /// <param name="b">Второе число</param>
+        /// <param name="c">Третье число</param>
+        /// <returns>Минимальное число</returns>
         static double MinNum(double a, double b, double c)
         {
             if (a<b && a<c)
@@ -152,11 +159,21 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             }
         }
 
+        /// <summary>
+        /// Метод возвращает количество цифр в целочисленном числе
+        /// </summary>
+        /// <param name="number">Целочисленное число</param>
+        /// <returns>Количество цифр в целочисленном числе</returns>
         static int AmountNumber(long number)
         {
             return (number == 0) ? 1 : (int)Math.Ceiling(Math.Log10(Math.Abs(number) + 0.5));
         }
 
+        /// <summary>
+        /// Метод возвращает сумму положительных нечетных чисел из массива чисел
+        /// </summary>
+        /// <param name="numbers">Массив чисел</param>
+        /// <returns>Сумма положительных нечетных чисел</returns>
         static int SumOddPositiveNumbers(int[] numbers)
         {
             int sum = 0;
@@ -170,11 +187,23 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             return sum;
         }
 
+        /// <summary>
+        /// Метод возвращает успешно ли была пройдена аутентификация
+        /// </summary>
+        /// <param name="login">Переданный логин</param>
+        /// <param name="password">Переданный пароль</param>
+        /// <returns>Булевое значение успешности аутентификации</returns>
         static bool Authentication(string login, string password)
         {
             return (login == "root" && password == "GeekBrains") ? true : false;           
         }
 
+        /// <summary>
+        /// Метод принимает рост и вес человека и возвращает соотвествие ИМТ норме, в случае отклонения дает рекомендации
+        /// </summary>
+        /// <param name="height">Рост человека в сантиметрах</param>
+        /// <param name="weight">Вес человека в килограммах</param>
+        /// <returns>Рекомендации в виде текстовой строки</returns>
         static string BMI(double height, double weight)
         {
             double BMI = weight / (Math.Pow(height, 2));
@@ -192,6 +221,12 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             }
         }
 
+        /// <summary>
+        /// Метод возвращает количество чисел, которые делятся на сумму своих цифр
+        /// </summary>
+        /// <param name="start">Начало числового ряда</param>
+        /// <param name="end">Конец числового ряда</param>
+        /// <returns>Количество чисел, которые делятся на сумму своих цифр</returns>
         static int AmountGoodNumbres(long start, long end)
         {
             int amount = 0;
@@ -217,12 +252,24 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             return amount;
         }
 
+
+        /// <summary>
+        /// Метод выводит в консоль все числа в заданном промежутке
+        /// </summary>
+        /// <param name="start">Начало числового ряда</param>
+        /// <param name="end">Конец числового ряда</param>
         static void ShowLineNumber(long start, long end)
         {
             Console.WriteLine(start);
             if (start < end) ShowLineNumber(start + 1, end);            
         }
 
+        /// <summary>
+        /// Метод возвращает сумму чисел в заданном промежутке
+        /// </summary>
+        /// <param name="start">Начало числового ряда</param>
+        /// <param name="end">Конец числового ряда</param>
+        /// <returns>Сумма чисел числового ряда</returns>
         static long SumLineNumber(long start, long end)
         {            
             if (start < end)
@@ -234,7 +281,11 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             sum = 0;
             return result;
         }
-        
+
+        /// <summary>
+        /// Метод позволяет вводить через консоль данные типа integer
+        /// </summary>
+        /// <param name="output">Введеное через консоль число, преобразованное в тип integer</param>
         static void InsertInt32(out int output)
         {
             while (true)
@@ -250,6 +301,10 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             }
         }
 
+        /// <summary>
+        /// Метод позволяет вводить через консоль данные типа integer
+        /// </summary>
+        /// <returns>Введеное через консоль число, преобразованное в тип integer</returns>
         static int InsertInt32()
         {
             int output;
@@ -267,6 +322,10 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             return output;
         }
 
+        /// <summary>
+        /// Метод позволяет вводить через консоль данные типа long
+        /// </summary>
+        /// <param name="output">Введеное через консоль число, преобразованное в тип long</param>
         static void InsertInt64(out long output)
         {
             while (true)
@@ -282,6 +341,10 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             }
         }
 
+        /// <summary>
+        /// Метод позволяет вводить через консоль данные типа long
+        /// </summary>
+        /// <returns>Введеное через консоль число, преобразованное в тип long</returns>
         static long InsertInt64()
         {
             long output;
@@ -299,6 +362,10 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             return output;
         }
 
+        /// <summary>
+        /// Метод позволяет вводить через консоль данные типа double
+        /// </summary>
+        /// <param name="output">Введеное через консоль число, преобразованное в тип double</param>
         static void InsertDouble(out double output)
         {
             while (true)
@@ -314,6 +381,10 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             }
         }
 
+        /// <summary>
+        /// Метод позволяет вводить через консоль данные типа double
+        /// </summary>
+        /// <returns>Введеное через консоль число, преобразованное в тип double</returns>
         static double InsertDouble()
         {
             double output;
