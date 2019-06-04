@@ -32,16 +32,16 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
                 {
                     case "1":
                         Console.Write("Введите первое число: ");
-                        double a = double.Parse(Console.ReadLine());
+                        InsertDouble(out double a);
                         Console.Write("Введите второе число: ");
-                        double b = double.Parse(Console.ReadLine());
+                        InsertDouble(out double b);
                         Console.Write("Введите третье число: ");
-                        double c = double.Parse(Console.ReadLine());
+                        InsertDouble(out double c);
                         Console.WriteLine("Минимальным является число {0}", MinNum(a, b, c));
                         break;
                     case "2":
                         Console.Write("Введите целочисленное число: ");
-                        long number = long.Parse(Console.ReadLine());
+                        InsertInt64(out long number);
                         Console.WriteLine("Количество цифр в числе = {0}", AmountNumber(number));
                         break;
                     case "3":                        
@@ -98,9 +98,9 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
                         break;
                     case "5":
                         Console.Write("Введите рост в сантиметрах: ");
-                        double height = double.Parse(Console.ReadLine());
+                        double height = InsertDouble();
                         Console.Write("Введите вес в килограммах: ");
-                        double weight = double.Parse(Console.ReadLine());
+                        double weight = InsertDouble();
                         Console.WriteLine(BMI(height / 100, weight));
                         break;
                     case "6":
@@ -108,9 +108,9 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
                         DateTime endTime;
                         TimeSpan resultTime;
                         Console.Write("Введите начальное число: ");
-                        long start = long.Parse(Console.ReadLine());
+                        long start = InsertInt64();
                         Console.Write("Введите конечное число: ");
-                        long end = long.Parse(Console.ReadLine());
+                        long end = InsertInt64();
                         startTime = DateTime.Now;
                         Console.WriteLine($"Количество 'хороших' чисел равно = {AmountGoodNumbres(start, end)}");
                         endTime = DateTime.Now;
@@ -238,6 +238,42 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             long result = sum;
             sum = 0;
             return result;
+        }
+        
+        static void InsertInt32(out int output)
+        {
+            int.TryParse(Console.ReadLine(), out output);
+        }
+
+        static int InsertInt32()
+        {
+            int output;
+            int.TryParse(Console.ReadLine(), out output);
+            return output;
+        }
+
+        static void InsertInt64(out long output)
+        {
+            long.TryParse(Console.ReadLine(), out output);
+        }
+
+        static long InsertInt64()
+        {
+            long output;
+            long.TryParse(Console.ReadLine(), out output);
+            return output;
+        }
+
+        static void InsertDouble(out double output)
+        {
+            double.TryParse(Console.ReadLine(), out output);
+        }
+
+        static double InsertDouble()
+        {
+            double output;
+            double.TryParse(Console.ReadLine(), out output);
+            return output;
         }
     }
 }
