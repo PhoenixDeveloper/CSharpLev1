@@ -24,7 +24,15 @@ namespace BMO.GameDevUnity.CSharp1.Pract3
             Console.WriteLine(@"
                                 1. Вывести список натуральных дробей.
                                 2. Ввести новую натуральную дробь.
-                                3. Удалить натуральную дробь по индексу.");
+                                3. Удалить натуральную дробь по индексу.
+                                4. Суммирование двух натуральных дробей.
+                                5. Вычитание двух натуральных дробей.
+                                6. Перемножение двух натуральных дробей.
+                                7. Деление двух натуральных дробей.
+                                8. Замена числителя у натуральной дроби.
+                                9. Замена знаменателя у натуральной дроби.
+                                10. Перевод натуральной дроби в десятичную
+                                11. Сокращение дроби.");
             while (true)
             {
                 Console.Write("Введите номер действия: ");
@@ -57,9 +65,166 @@ namespace BMO.GameDevUnity.CSharp1.Pract3
                             else
                             {
                                 Console.WriteLine("Индекс вышел за зону списка!");
-                            }
+                            }                            
                         }
                         naturalFractionList.RemoveAt(index);
+                        break;
+                    case "4":
+                        Console.Write("Введите индекс первой дроби: ");
+                        InsertInt32(out index);
+                        Console.Write("Введите индекс второй дроби: ");
+                        InsertInt32(out int index2);
+                        NaturalFraction result = NaturalFraction.Sum(naturalFractionList[index], naturalFractionList[index2]);
+                        Console.WriteLine($"{naturalFractionList[index].ToString()} + {naturalFractionList[index2].ToString()} = " +
+                            $"{result}");
+                        Console.WriteLine("Сохранить дробь в список? (yes/no)");
+                        string choise;
+                        while (true)
+                        {
+                            choise = Console.ReadLine();
+                            if (choise == "yes")
+                            {
+                                naturalFractionList.Add(result);
+                                break;
+                            }
+                            else if (choise == "no")
+                            {
+                                break;
+                            }
+                        }
+                        break;
+                    case "5":
+                        Console.Write("Введите индекс первой дроби: ");
+                        InsertInt32(out index);
+                        Console.Write("Введите индекс второй дроби: ");
+                        InsertInt32(out index2);
+                        result = NaturalFraction.Difference(naturalFractionList[index], naturalFractionList[index2]);
+                        Console.WriteLine($"{naturalFractionList[index].ToString()} - {naturalFractionList[index2].ToString()} = " +
+                            $"{result}");
+                        Console.WriteLine("Сохранить дробь в список? (yes/no)");                        
+                        while (true)
+                        {
+                            choise = Console.ReadLine();
+                            if (choise == "yes")
+                            {
+                                naturalFractionList.Add(result);
+                                break;
+                            }
+                            else if (choise == "no")
+                            {
+                                break;
+                            }
+                        }
+                        break;
+                    case "6":
+                        Console.Write("Введите индекс первой дроби: ");
+                        InsertInt32(out index);
+                        Console.Write("Введите индекс второй дроби: ");
+                        InsertInt32(out index2);
+                        result = NaturalFraction.Multiplication(naturalFractionList[index], naturalFractionList[index2]);
+                        Console.WriteLine($"{naturalFractionList[index].ToString()} * {naturalFractionList[index2].ToString()} = " +
+                            $"{result}");
+                        Console.WriteLine("Сохранить дробь в список? (yes/no)");                        
+                        while (true)
+                        {
+                            choise = Console.ReadLine();
+                            if (choise == "yes")
+                            {
+                                naturalFractionList.Add(result);
+                                break;
+                            }
+                            else if (choise == "no")
+                            {
+                                break;
+                            }
+                        }
+                        break;
+                    case "7":
+                        Console.Write("Введите индекс первой дроби: ");
+                        InsertInt32(out index);
+                        Console.Write("Введите индекс второй дроби: ");
+                        InsertInt32(out index2);
+                        result = NaturalFraction.Division(naturalFractionList[index], naturalFractionList[index2]);
+                        Console.WriteLine($"{naturalFractionList[index].ToString()} / {naturalFractionList[index2].ToString()} = " +
+                            $"{result}");
+                        Console.WriteLine("Сохранить дробь в список? (yes/no)");                        
+                        while (true)
+                        {
+                            choise = Console.ReadLine();
+                            if (choise == "yes")
+                            {
+                                naturalFractionList.Add(result);
+                                break;
+                            }
+                            else if (choise == "no")
+                            {
+                                break;
+                            }
+                        }
+                        break;
+                    case "8":
+                        Console.Write("Введите индекс дроби: ");
+                        InsertInt32(out index);
+                        Console.WriteLine($"Вы желаете изменить данную дробь - {naturalFractionList[index].ToString()} ? (yes/no)");
+                        while (true)
+                        {
+                            choise = Console.ReadLine();
+                            if (choise == "yes")
+                            {
+                                Console.Write("Введите новый числитель: ");
+                                InsertInt64(out numerator);
+                                naturalFractionList[index].SetNumerator(numerator);
+                                break;
+                            }
+                            else if (choise == "no")
+                            {
+                                break;
+                            }                            
+                        }
+                        break;
+                    case "9":
+                        Console.Write("Введите индекс дроби: ");
+                        InsertInt32(out index);
+                        Console.WriteLine($"Вы желаете изменить данную дробь - {naturalFractionList[index].ToString()} ? (yes/no)");
+                        while (true)
+                        {
+                            choise = Console.ReadLine();
+                            if (choise == "yes")
+                            {
+                                Console.Write("Введите новый знаменатель: ");
+                                InsertInt64(out denominator);
+                                naturalFractionList[index].SetDenominator(denominator);
+                                break;
+                            }
+                            else if (choise == "no")
+                            {
+                                break;
+                            }
+                        }
+                        break;
+                    case "10":
+                        Console.Write("Введите индекс дроби: ");
+                        InsertInt32(out index);
+                        Console.WriteLine($"Натуральная дробь {naturalFractionList[index].ToString()} в десятичном виде = " +
+                            $"{naturalFractionList[index].DecimalFraction}");
+                        break;
+                    case "11":
+                        Console.Write("Введите индекс дроби: ");
+                        InsertInt32(out index);
+                        Console.WriteLine($"Вы желаете сократить данную дробь - {naturalFractionList[index].ToString()} ? (yes/no)");
+                        while (true)
+                        {
+                            choise = Console.ReadLine();
+                            if (choise == "yes")
+                            {
+                                naturalFractionList[index].FractionReduction();
+                                break;
+                            }
+                            else if (choise == "no")
+                            {
+                                break;
+                            }
+                        }
                         break;
                     case "exit":
                         return;
