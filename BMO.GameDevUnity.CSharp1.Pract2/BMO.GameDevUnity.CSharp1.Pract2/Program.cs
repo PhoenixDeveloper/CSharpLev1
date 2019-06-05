@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
+using System.Threading;
 
 namespace BMO.GameDevUnity.CSharp1.Pract2
 {
@@ -12,6 +10,8 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
 
         static void Main(string[] args)
         {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
             Console.WriteLine(@"© (Беленко Михаил Олегович),
                                Задания:
                                1. Написать метод, возвращающий минимальное из трёх чисел.
@@ -370,7 +370,7 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
         {
             while (true)
             {
-                if (double.TryParse(Console.ReadLine().Replace('.', ','), out output))
+                if (double.TryParse(Console.ReadLine(), out output))
                 {
                     break;
                 }
@@ -390,7 +390,7 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             double output;
             while (true)
             {
-                if (double.TryParse(Console.ReadLine().Replace('.', ','), out output))
+                if (double.TryParse(Console.ReadLine(), out output))
                 {
                     break;
                 }
