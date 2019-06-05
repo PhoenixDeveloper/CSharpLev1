@@ -370,7 +370,7 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
         {
             while (true)
             {
-                if (double.TryParse(Console.ReadLine(), out output))
+                if (double.TryParse(Console.ReadLine().Replace('.', ','), out output))
                 {
                     break;
                 }
@@ -390,7 +390,7 @@ namespace BMO.GameDevUnity.CSharp1.Pract2
             double output;
             while (true)
             {
-                if (double.TryParse(Console.ReadLine(), out output))
+                if (double.TryParse(Console.ReadLine().Replace('.', ','), out output))
                 {
                     break;
                 }
