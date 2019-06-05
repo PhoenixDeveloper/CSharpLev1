@@ -13,8 +13,8 @@ namespace BMO.GameDevUnity.CSharp1.Pract3
 
         public NaturalFraction(long numerator, long denominator)
         {
-            this.numerator = numerator;
-            this.denominator = denominator;
+            SetNumerator(numerator);
+            SetDenominator(denominator);
         }
 
         public long GetNumerator()
@@ -22,9 +22,34 @@ namespace BMO.GameDevUnity.CSharp1.Pract3
             return numerator;
         }
 
+        public void SetNumerator(long numerator)
+        {
+            this.numerator = numerator;
+        }
+
         public long GetDenominator()
         {
             return denominator;
+        }
+
+        public void SetDenominator(long denominator)
+        {
+            if (denominator == 0)
+            {
+                throw new ArgumentException("Знаменатель не может быть равен 0");
+            }
+            else
+            {
+                if (denominator < 0)
+                {
+                    this.numerator = -this.numerator;
+                    this.denominator = -denominator;
+                }
+                else
+                {
+                    this.denominator = denominator;
+                }
+            }
         }
 
         public static NaturalFraction Sum(NaturalFraction a, NaturalFraction b)
@@ -60,6 +85,11 @@ namespace BMO.GameDevUnity.CSharp1.Pract3
         public void Print()
         {
             Console.WriteLine($"Значение дроби равно = {numerator} / {denominator}");
+        }
+
+        public override string ToString()
+        {
+            return $"{numerator} / {denominator}";
         }
 
         private static long FindNOD(long a, long b)
