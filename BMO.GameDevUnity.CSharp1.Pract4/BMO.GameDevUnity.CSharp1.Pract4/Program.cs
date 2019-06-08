@@ -53,6 +53,10 @@ namespace BMO.GameDevUnity.CSharp1.Pract4
                         Console.Write($"\n{countThreeNumberPrint}");
                         Console.WriteLine($"Количество пар элементов массива, в которых только одно число делится на 3 = {countThreeNumber}");
                         break;
+                    case "2":
+                        arrayNumber = StaticClass.ArrayReadFile(@"ArrayNumber.txt");
+                        Console.WriteLine($"Количество пар элементов массива, в которых только одно число делится на 3 = {StaticClass.CountThreeNumber(arrayNumber)}");
+                        break;
                     case "exit":
                         return;
                     default:
