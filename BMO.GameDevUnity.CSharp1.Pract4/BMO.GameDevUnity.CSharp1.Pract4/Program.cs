@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UtilityLibraries;
 
 namespace BMO.GameDevUnity.CSharp1.Pract4
 {
@@ -56,6 +57,23 @@ namespace BMO.GameDevUnity.CSharp1.Pract4
                     case "2":
                         arrayNumber = StaticClass.ArrayReadFile(@"ArrayNumber.txt");
                         Console.WriteLine($"Количество пар элементов массива, в которых только одно число делится на 3 = {StaticClass.CountThreeNumber(arrayNumber)}");
+                        break;
+                    case "3":
+                        CoolArray array = new CoolArray(10, -10, 4);
+                        array[3] = 26;
+                        Console.WriteLine($"Сумма элементов массива равна = {array.Sum}");
+                        Console.WriteLine($"Максимальный элемент = {array.Max}, количество = {array.MaxCount}");
+                        int[] b = array.Inverse();
+                        for (int i = 0; i < b.Length; i++)
+                        {
+                            Console.WriteLine($"{i} элемементы - {array[i]} : {b[i]}");
+                        }
+                        array.Multi(5);
+                        for (int i = 0; i < array.Length; i++)
+                        {
+                            Console.WriteLine($"{i} элемент array = {array[i]}");
+                        }
+                        Dictionary<int, int> keys = array.NumberElelementsArray();                        
                         break;
                     case "exit":
                         return;
