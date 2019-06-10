@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authentication.cs" />
     <Compile Include="CoolArray.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

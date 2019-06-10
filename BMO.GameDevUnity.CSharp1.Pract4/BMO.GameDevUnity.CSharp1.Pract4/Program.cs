@@ -75,6 +75,29 @@ namespace BMO.GameDevUnity.CSharp1.Pract4
                         }
                         Dictionary<int, int> keys = array.NumberElelementsArray();                        
                         break;
+                    case "4":
+                        int amountAuthentication = 0;
+                        do
+                        {
+                            if (Authentication.Login(@"D:\Authentication.txt"))
+                            {
+                                Console.WriteLine("Добро пожаловать!");
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Неверная связка логин/пароль");
+                                Console.WriteLine("Продолжить?");
+                                Console.ReadKey();
+                            }
+                            amountAuthentication++;
+                        }
+                        while (amountAuthentication < 3);
+                        if (amountAuthentication == 3)
+                        {
+                            Console.WriteLine("Превышено количество попыток аутентификации");
+                        }
+                        break;
                     case "exit":
                         return;
                     default:
