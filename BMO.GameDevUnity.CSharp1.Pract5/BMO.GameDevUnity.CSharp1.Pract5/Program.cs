@@ -25,7 +25,16 @@ namespace BMO.GameDevUnity.CSharp1.Pract5
                                     г) Сформировать строку с помощью StringBuilder из самых длинных слов сообщения.
                                     д) ***Создать метод, который производит частотный анализ текста. В качестве параметра в него передается массив слов и текст, в качестве результата метод возвращает сколько раз каждое из слов массива входит в этот текст. Здесь требуется использовать класс Dictionary."
                               );
+            Console.WriteLine("Первое задание: ");
             TaskExam("Students.txt");
+            Console.WriteLine("Второе задание: ");
+            string message = "Милый свитер носит мальчик, милый милый, что нельзя. Есть у мальчика собачка, больше всех ему нужна";
+            string[] arrayWords = new string[3] { "милый", "мальчик", "нужна" };
+            Console.WriteLine($"Первоначальное сообщение: {message}");
+            Message.NoMore(message, 5);
+            Message.MoreLength(message);
+            Message.FrequencyAnalysis(arrayWords, message);
+            Message.Delete(ref message, 'й');            
             Console.ReadKey();
         }
 
