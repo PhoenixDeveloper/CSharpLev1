@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMO.GameDevUnity.CSharp1.Pract5", "BMO.GameDevUnity.CSharp1.Pract5\BMO.GameDevUnity.CSharp1.Pract5.csproj", "{D752BA6F-34EA-40F5-A6E4-11D9BC418F7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D752BA6F-34EA-40F5-A6E4-11D9BC418F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D752BA6F-34EA-40F5-A6E4-11D9BC418F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D752BA6F-34EA-40F5-A6E4-11D9BC418F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D752BA6F-34EA-40F5-A6E4-11D9BC418F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C9343A4-2B68-4EDB-BF89-9EFF39047C66}
+	EndGlobalSection
+EndGlobal
