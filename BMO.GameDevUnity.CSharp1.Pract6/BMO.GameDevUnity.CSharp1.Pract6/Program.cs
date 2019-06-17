@@ -33,9 +33,19 @@ namespace BMO.GameDevUnity.CSharp1.Pract6
             return a * Math.Sin(x);
         }
 
-        public static double F(double x)
+        public static double F1(double x)
         {
             return x * x - 50 * x + 10;
+        }
+
+        public static double F2(double x)
+        {
+            return x * Math.Sin(x);
+        }
+
+        public static double F3(double x)
+        {
+            return (Math.Pow(x,2)-10)*Math.Pow(x, 3);
         }
 
         public static void SaveFunc(string fileName, FunMin fun, double a, double b, double h)
@@ -84,9 +94,52 @@ namespace BMO.GameDevUnity.CSharp1.Pract6
             #endregion
 
             #region Второе задание
-            Console.WriteLine("Минимум функции (x * x - 50 * x + 10) на промежутке [-100, 100]:");
-            SaveFunc("data.bin", F, -100, 100, 0.5);
-            Console.WriteLine(Load("data.bin"));
+            Console.WriteLine("Второе задание:");
+            while (true)
+            {
+                Console.WriteLine(@"
+                            Выберите одну из представленных функций:
+                            1: x * x - 50 * x + 10
+                            2: x * sin(x)
+                            3: (x^2 - 10) * x^3
+                            8: Exit");
+                int key;
+                int a, b;
+                int.TryParse(Console.ReadLine(), out key);
+                if (key == 8)
+                {
+                    return;
+                }
+                Console.Write("Введите начало отрезка: ");
+                int.TryParse(Console.ReadLine(), out a);
+                Console.Write("Введите конец отрезка: ");
+                int.TryParse(Console.ReadLine(), out b);
+                switch (key)
+                {
+                    case 1:
+                        Console.WriteLine($"Минимум функции (x * x - 50 * x + 10) на промежутке [{a}, {b}]:");
+                        SaveFunc("data.bin", F1, a, b, 0.5);
+                        Console.WriteLine(Load("data.bin"));
+                        break;
+                    case 2:
+                        Console.WriteLine($"Минимум функции (x * sin(x)) на промежутке [{a}, {b}]:");
+                        SaveFunc("data.bin", F2, a, b, 0.5);
+                        Console.WriteLine(Load("data.bin"));
+                        break;
+                    case 3:
+                        Console.WriteLine($"Минимум функции ((x^2 - 10) * x^3) на промежутке [{a}, {b}]:");
+                        SaveFunc("data.bin", F3, a, b, 0.5);
+                        Console.WriteLine(Load("data.bin"));
+                        break;
+                    case 8:
+                        return;
+                    default:
+                        Console.WriteLine("Неверный ввод");
+                        break;
+                }
+                
+            }            
+            
             #endregion
 
             Console.ReadKey();
