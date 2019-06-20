@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGame));
             this.lblInfo1 = new System.Windows.Forms.Label();
-            this.tBoxNumber = new System.Windows.Forms.TextBox();
-            this.lblInfo2 = new System.Windows.Forms.Label();
-            this.btnOK = new System.Windows.Forms.Button();
+            this.btnLink = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -45,31 +43,15 @@
             this.lblInfo1.TabIndex = 0;
             this.lblInfo1.Text = "label1";
             // 
-            // tBoxNumber
+            // btnLink
             // 
-            this.tBoxNumber.Location = new System.Drawing.Point(113, 64);
-            this.tBoxNumber.Name = "tBoxNumber";
-            this.tBoxNumber.Size = new System.Drawing.Size(50, 22);
-            this.tBoxNumber.TabIndex = 1;
-            // 
-            // lblInfo2
-            // 
-            this.lblInfo2.AutoSize = true;
-            this.lblInfo2.Location = new System.Drawing.Point(12, 67);
-            this.lblInfo2.Name = "lblInfo2";
-            this.lblInfo2.Size = new System.Drawing.Size(95, 17);
-            this.lblInfo2.TabIndex = 2;
-            this.lblInfo2.Text = "Введи число:";
-            // 
-            // btnOK
-            // 
-            this.btnOK.Location = new System.Drawing.Point(113, 93);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(50, 23);
-            this.btnOK.TabIndex = 3;
-            this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.btnLink.Location = new System.Drawing.Point(16, 68);
+            this.btnLink.Name = "btnLink";
+            this.btnLink.Size = new System.Drawing.Size(157, 23);
+            this.btnLink.TabIndex = 3;
+            this.btnLink.Text = "Ввести число";
+            this.btnLink.UseVisualStyleBackColor = true;
+            this.btnLink.Click += new System.EventHandler(this.btnLink_Click);
             // 
             // lblResult
             // 
@@ -86,9 +68,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(302, 193);
             this.Controls.Add(this.lblResult);
-            this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.lblInfo2);
-            this.Controls.Add(this.tBoxNumber);
+            this.Controls.Add(this.btnLink);
             this.Controls.Add(this.lblInfo1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -104,9 +84,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblInfo1;
-        private System.Windows.Forms.TextBox tBoxNumber;
-        private System.Windows.Forms.Label lblInfo2;
-        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Button btnLink;
         private System.Windows.Forms.Label lblResult;
     }
 }

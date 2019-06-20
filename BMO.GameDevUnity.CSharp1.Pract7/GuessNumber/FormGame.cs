@@ -22,21 +22,28 @@ namespace GuessNumber
             result = rnd.Next(1, 100);
         }
 
-        private void btnOK_Click(object sender, EventArgs e)
+        public void CheckResult(int resultInput)
         {
-            if (int.Parse(tBoxNumber.Text) > result)
+            if (resultInput > result)
             {
-                lblResult.Text = $"Я загадал\nменьше {tBoxNumber.Text}";
+                lblResult.Text = $"Я загадал\nменьше {resultInput}";
             }
-            else if (int.Parse(tBoxNumber.Text) < result)
+            else if (resultInput < result)
             {
-                lblResult.Text = $"Я загадал\nбольше {tBoxNumber.Text}";
+                lblResult.Text = $"Я загадал\nбольше {resultInput}";
             }
             else
             {
                 MessageBox.Show("Ты угадал!", "Победа");
                 Program.Restart();
             }
+        }
+
+        private void btnLink_Click(object sender, EventArgs e)
+        {
+            Form numberEnter = new FormEnter();
+            numberEnter.ShowDialog();
+            CheckResult(Number.number);
         }
     }
 }
