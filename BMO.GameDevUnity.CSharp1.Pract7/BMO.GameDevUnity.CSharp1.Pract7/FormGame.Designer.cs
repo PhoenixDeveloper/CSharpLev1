@@ -37,6 +37,7 @@
             this.lblAmountClick = new System.Windows.Forms.Label();
             this.lblInfo2 = new System.Windows.Forms.Label();
             this.lblMission = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCommand1
@@ -51,7 +52,7 @@
             // 
             // btnCommand2
             // 
-            this.btnCommand2.Location = new System.Drawing.Point(215, 90);
+            this.btnCommand2.Location = new System.Drawing.Point(215, 64);
             this.btnCommand2.Name = "btnCommand2";
             this.btnCommand2.Size = new System.Drawing.Size(75, 23);
             this.btnCommand2.TabIndex = 1;
@@ -61,7 +62,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(215, 156);
+            this.btnReset.Location = new System.Drawing.Point(215, 150);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 2;
@@ -115,11 +116,22 @@
             this.lblMission.TabIndex = 7;
             this.lblMission.Text = "0";
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(215, 108);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 8;
+            this.btnCancel.Text = "Отмена";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(302, 193);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblMission);
             this.Controls.Add(this.lblInfo2);
             this.Controls.Add(this.lblAmountClick);
@@ -151,6 +163,7 @@
         private System.Windows.Forms.Label lblAmountClick;
         private System.Windows.Forms.Label lblInfo2;
         private System.Windows.Forms.Label lblMission;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
 
