@@ -16,7 +16,12 @@ namespace GuessNumber
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormGame());
+        }
+
+        public static void Restart()
+        {
+            Application.Restart();
         }
     }
 }
