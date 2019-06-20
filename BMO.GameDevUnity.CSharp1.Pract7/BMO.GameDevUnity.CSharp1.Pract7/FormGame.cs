@@ -10,9 +10,12 @@ using System.Windows.Forms;
 
 namespace BMO.GameDevUnity.CSharp1.Pract7
 {
-    public partial class Form1 : Form
+    public partial class FormGame : Form
     {
-        public Form1()
+        private Random rnd = new Random();
+        int mission = 0;
+
+        public FormGame()
         {
             InitializeComponent();
         }
@@ -33,6 +36,23 @@ namespace BMO.GameDevUnity.CSharp1.Pract7
         {
             lblNumber.Text = "1";
             lblAmountClick.Text = "0";
+        }
+
+        private void FormGame_Load(object sender, EventArgs e)
+        {
+            mission = rnd.Next(150, 60000);
+            lblMission.Text = mission.ToString();
+            MessageBox.Show($"Вам необходимо получить число {mission}, за наименьшее количество ходов", "Цель");
+        }
+
+        private void lblNumber_TextChanged(object sender, EventArgs e)
+        {
+            if (lblNumber.Text == lblMission.Text)
+            {
+                MessageBox.Show($"Вам удалось получить необходимое число {mission} за {lblAmountClick.Text} действий. Поздравляем!", 
+                    "Победа");
+                this.Close();
+            }
         }
     }
 }

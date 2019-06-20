@@ -1,6 +1,6 @@
 ﻿namespace BMO.GameDevUnity.CSharp1.Pract7
 {
-    partial class Form1
+    partial class FormGame
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGame));
             this.btnCommand1 = new System.Windows.Forms.Button();
             this.btnCommand2 = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.lblNumber = new System.Windows.Forms.Label();
             this.lblInfo1 = new System.Windows.Forms.Label();
             this.lblAmountClick = new System.Windows.Forms.Label();
+            this.lblInfo2 = new System.Windows.Forms.Label();
+            this.lblMission = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCommand1
@@ -74,6 +77,7 @@
             this.lblNumber.Size = new System.Drawing.Size(16, 17);
             this.lblNumber.TabIndex = 3;
             this.lblNumber.Text = "1";
+            this.lblNumber.TextChanged += new System.EventHandler(this.lblNumber_TextChanged);
             // 
             // lblInfo1
             // 
@@ -93,19 +97,45 @@
             this.lblAmountClick.TabIndex = 5;
             this.lblAmountClick.Text = "0";
             // 
-            // Form1
+            // lblInfo2
+            // 
+            this.lblInfo2.AutoSize = true;
+            this.lblInfo2.Location = new System.Drawing.Point(13, 130);
+            this.lblInfo2.Name = "lblInfo2";
+            this.lblInfo2.Size = new System.Drawing.Size(46, 17);
+            this.lblInfo2.TabIndex = 6;
+            this.lblInfo2.Text = "Цель:";
+            // 
+            // lblMission
+            // 
+            this.lblMission.AutoSize = true;
+            this.lblMission.Location = new System.Drawing.Point(13, 156);
+            this.lblMission.Name = "lblMission";
+            this.lblMission.Size = new System.Drawing.Size(16, 17);
+            this.lblMission.TabIndex = 7;
+            this.lblMission.Text = "0";
+            // 
+            // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(302, 193);
+            this.Controls.Add(this.lblMission);
+            this.Controls.Add(this.lblInfo2);
             this.Controls.Add(this.lblAmountClick);
             this.Controls.Add(this.lblInfo1);
             this.Controls.Add(this.lblNumber);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnCommand2);
             this.Controls.Add(this.btnCommand1);
-            this.Name = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.Name = "FormGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Удвоитель";
+            this.TopMost = true;
+            this.Load += new System.EventHandler(this.FormGame_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,6 +149,8 @@
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.Label lblInfo1;
         private System.Windows.Forms.Label lblAmountClick;
+        private System.Windows.Forms.Label lblInfo2;
+        private System.Windows.Forms.Label lblMission;
     }
 }
 
