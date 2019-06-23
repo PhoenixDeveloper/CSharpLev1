@@ -37,8 +37,16 @@ namespace BelieveOrNotBelieve
         // Обработчик события изменения значения numericUpDown
         private void nudNumber_ValueChanged(object sender, EventArgs e)
         {
-            tboxQuestion.Text = database[(int)nudNumber.Value - 1].text;
-            cboxTrue.Checked = database[(int)nudNumber.Value - 1].trueFalse;
+            try
+            {
+                tboxQuestion.Text = database[(int)nudNumber.Value - 1].text;
+                cboxTrue.Checked = database[(int)nudNumber.Value - 1].trueFalse;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Обращение к несуществующему вопросу!", "Ошибка",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
         }
 
         // Обработчик кнопки Добавить
@@ -66,8 +74,16 @@ namespace BelieveOrNotBelieve
         // Обработчик пункта меню Save
         private void miSave_Click(object sender, EventArgs e)
         {
-            if (database != null) database.Save();
-            else MessageBox.Show("База данных не создана");
+            try
+            {
+                database.Save();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("База данных не создана!", "Ошибка",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // Обработчик пункта меню Open
@@ -78,9 +94,17 @@ namespace BelieveOrNotBelieve
             {
                 database = new TrueFalse(ofd.FileName);
                 database.Load();
-                nudNumber.Minimum = 1;
-                nudNumber.Maximum = database.Count;
-                nudNumber.Value = 1;
+                if (database.Count < 100)
+                {
+                    nudNumber.Minimum = 1;
+                    nudNumber.Maximum = database.Count;
+                    nudNumber.Value = 1;
+                }
+                else
+                {
+                    MessageBox.Show("Слишком большой файл!", "Ошибка",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
