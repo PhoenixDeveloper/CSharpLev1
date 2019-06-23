@@ -44,6 +44,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSaveQuest = new System.Windows.Forms.Button();
             this.mi_aboutProgram = new System.Windows.Forms.ToolStripMenuItem();
+            this.miSaveAs = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem.SuspendLayout();
             this.pnlButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumber)).BeginInit();
@@ -68,6 +69,7 @@
             this.miNew,
             this.miOpen,
             this.miSave,
+            this.miSaveAs,
             this.toolStripSeparator1,
             this.miExit});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -187,6 +189,13 @@
             this.mi_aboutProgram.Text = "About program";
             this.mi_aboutProgram.Click += new System.EventHandler(this.mi_aboutProgram_Click);
             // 
+            // miSaveAs
+            // 
+            this.miSaveAs.Name = "miSaveAs";
+            this.miSaveAs.Size = new System.Drawing.Size(216, 26);
+            this.miSaveAs.Text = "Save As";
+            this.miSaveAs.Click += new System.EventHandler(this.miSaveAs_Click);
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -226,6 +235,7 @@
         private System.Windows.Forms.CheckBox cboxTrue;
         private System.Windows.Forms.NumericUpDown nudNumber;
         private System.Windows.Forms.ToolStripMenuItem mi_aboutProgram;
+        private System.Windows.Forms.ToolStripMenuItem miSaveAs;
     }
 }
 

@@ -95,10 +95,11 @@ namespace BelieveOrNotBelieve
                 database = new TrueFalse(ofd.FileName);
                 database.Load();
                 if (database.Count < 100)
-                {
+                {                    
                     nudNumber.Minimum = 1;
                     nudNumber.Maximum = database.Count;
                     nudNumber.Value = 1;
+                    nudNumber_ValueChanged(string.Empty, EventArgs.Empty);
                 }
                 else
                 {
@@ -119,6 +120,25 @@ namespace BelieveOrNotBelieve
         {
             MessageBox.Show("Верю - Не верю. v 1.0.0\n© Беленко Михаил Олегович. 2019 год.", "О программе",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void miSaveAs_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog safd = new SaveFileDialog();
+            try
+            {
+                if (safd.ShowDialog() == DialogResult.OK)
+                {
+                    database.FileName = safd.FileName;
+                    database.Save();
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("База данных не создана!", "Ошибка",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
