@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGame));
             this.ToolStripMenuItem = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miNew = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +50,7 @@
             // 
             // ToolStripMenuItem
             // 
+            this.ToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ToolStripMenuItem.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ToolStripMenuItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
@@ -106,6 +108,7 @@
             // tboxQuestion
             // 
             this.tboxQuestion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tboxQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tboxQuestion.Location = new System.Drawing.Point(0, 28);
             this.tboxQuestion.Multiline = true;
             this.tboxQuestion.Name = "tboxQuestion";
@@ -114,6 +117,7 @@
             // 
             // pnlButtons
             // 
+            this.pnlButtons.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pnlButtons.Controls.Add(this.btnSaveQuest);
             this.pnlButtons.Controls.Add(this.btnDelete);
             this.pnlButtons.Controls.Add(this.btnAdd);
@@ -181,6 +185,7 @@
             this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.tboxQuestion);
             this.Controls.Add(this.ToolStripMenuItem);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.ToolStripMenuItem;
             this.Name = "FormGame";
             this.Text = "Верю - Не верю";
