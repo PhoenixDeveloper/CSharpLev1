@@ -43,6 +43,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSaveQuest = new System.Windows.Forms.Button();
+            this.mi_aboutProgram = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem.SuspendLayout();
             this.pnlButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumber)).BeginInit();
@@ -53,7 +54,8 @@
             this.ToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ToolStripMenuItem.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ToolStripMenuItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.mi_aboutProgram});
             this.ToolStripMenuItem.Location = new System.Drawing.Point(0, 0);
             this.ToolStripMenuItem.Name = "ToolStripMenuItem";
             this.ToolStripMenuItem.Size = new System.Drawing.Size(800, 28);
@@ -177,6 +179,14 @@
             this.btnSaveQuest.UseVisualStyleBackColor = true;
             this.btnSaveQuest.Click += new System.EventHandler(this.btnSaveQuest_Click);
             // 
+            // mi_aboutProgram
+            // 
+            this.mi_aboutProgram.Image = global::BelieveOrNotBelieve.Properties.Resources.information_info_1565;
+            this.mi_aboutProgram.Name = "mi_aboutProgram";
+            this.mi_aboutProgram.Size = new System.Drawing.Size(144, 24);
+            this.mi_aboutProgram.Text = "About program";
+            this.mi_aboutProgram.Click += new System.EventHandler(this.mi_aboutProgram_Click);
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -215,6 +225,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.CheckBox cboxTrue;
         private System.Windows.Forms.NumericUpDown nudNumber;
+        private System.Windows.Forms.ToolStripMenuItem mi_aboutProgram;
     }
 }
 

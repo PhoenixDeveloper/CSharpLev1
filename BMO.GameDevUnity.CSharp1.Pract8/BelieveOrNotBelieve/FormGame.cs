@@ -114,5 +114,11 @@ namespace BelieveOrNotBelieve
             database[(int)nudNumber.Value - 1].text = tboxQuestion.Text;
             database[(int)nudNumber.Value - 1].trueFalse = cboxTrue.Checked;
         }
+
+        private void mi_aboutProgram_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Верю - Не верю. v 1.0.0\n© Беленко Михаил Олегович. 2019 год.", "О программе",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
