@@ -1,0 +1,391 @@
+<?xml version="1.0"?>
+<ArrayOfQuestion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+  <Question>
+    <text>Море - мокрое?</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>3</text>
+    <trueFalse>true</trueFalse>
+  </Question>
+  <Question>
+    <text>Мыши - летают?</text>
+    <trueFalse>false</trueFalse>
+  </Question>
+</ArrayOfQuestion>

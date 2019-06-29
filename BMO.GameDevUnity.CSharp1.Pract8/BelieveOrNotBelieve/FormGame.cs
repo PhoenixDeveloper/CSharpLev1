@@ -112,8 +112,17 @@ namespace BelieveOrNotBelieve
         // Обработчик кнопки Сохранить (вопрос)
         private void btnSaveQuest_Click(object sender, EventArgs e)
         {
-            database[(int)nudNumber.Value - 1].text = tboxQuestion.Text;
-            database[(int)nudNumber.Value - 1].trueFalse = cboxTrue.Checked;
+            try
+            {
+                database[(int)nudNumber.Value - 1].text = tboxQuestion.Text;
+                database[(int)nudNumber.Value - 1].trueFalse = cboxTrue.Checked;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("База данных не создана!", "Ошибка",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
         }
 
         private void mi_aboutProgram_Click(object sender, EventArgs e)

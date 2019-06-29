@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ArrayOfSpending xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Spending>
+    <Text>Молоко</Text>
+    <Money>15</Money>
+    <Date>2019-06-29T00:00:00+03:00</Date>
+  </Spending>
+  <Spending>
+    <Text>Печенье</Text>
+    <Money>35</Money>
+    <Date>2019-06-26T00:00:00</Date>
+  </Spending>
+  <Spending>
+    <Text>На удаление</Text>
+    <Money>100</Money>
+    <Date>2019-06-27T00:00:00</Date>
+  </Spending>
+  <Spending>
+    <Text>Введите сюда список покупок за 05.06.2019</Text>
+    <Money>0</Money>
+    <Date>2019-06-05T00:00:00</Date>
+  </Spending>
+</ArrayOfSpending>
